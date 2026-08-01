@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="LiquidGlassCardView">
+        <attr name="glassCornerRadius" format="dimension" />
+        <attr name="glassBlurRadius" format="dimension" />
+        <attr name="glassTintAlpha" format="float" />
+        <attr name="glassAutoCapture" format="boolean" />
+    </declare-styleable>
+</resources>
