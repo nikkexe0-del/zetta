@@ -1,0 +1,76 @@
+name: Android Release
+
+env:
+  main_project_module: app
+
+# Publishes a GitHub Release with the built APKs attached (including the
+# arm64-v8a github-release APK). This is additive - it does not change or
+# replace the existing "Android CI" workflow (android.yml), which still runs
+# on every push and only uploads build artifacts for verification.
+#
+# Trigger it either by:
+#   - pushing a version tag, e.g.  git tag v1.8.9.2 && git push origin v1.8.9.2
+#   - manually via the "Run workflow" button in the Actions tab
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: "corretto"
+          cache: "gradle"
+
+      - name: Create Blank Local Properties File
+        run: touch local.properties
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build Github release APKs
+        run: ./gradlew assembleGithubRelease --warning-mode all
+
+      - name: Build FOSS release APKs
+        run: ./gradlew assembleFossRelease --warning-mode all
+
+      - name: Determine release tag
+        run: |
+          if [[ "${{ github.ref_type }}" == "tag" ]]; then
+            echo "RELEASE_TAG=${{ github.ref_name }}" >> $GITHUB_ENV
+          else
+            APK_NAME=$(basename "$(find ${{ env.main_project_module }}/build/outputs/apk/github/release/ -type f -name '*arm64*.apk' | head -n1)")
+            VERSION_NAME=$(echo "$APK_NAME" | sed -E 's/^YTDLnis-(.+)-github-arm64-v8a-release\.apk$/\1/')
+            echo "RELEASE_TAG=v${VERSION_NAME}" >> $GITHUB_ENV
+          fi
+
+      - name: Publish GitHub Release with APKs
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.RELEASE_TAG }}
+          name: ${{ env.RELEASE_TAG }}
+          generate_release_notes: true
+          # arm64-v8a is the primary asset asked for, but every architecture
+          # variant produced by the build gets attached too so nothing built
+          # is left unpublished.
+          files: |
+            ${{ env.main_project_module }}/build/outputs/apk/github/release/*.apk
+            ${{ env.main_project_module }}/build/outputs/apk/foss/release/*.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
