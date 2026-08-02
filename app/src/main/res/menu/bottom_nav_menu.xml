@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  IMPORTANT: BottomNavigationView throws IllegalArgumentException if this menu ever
+  contains more than 5 items. The count includes items marked android:visible="false",
+  because the limit is enforced in NavigationBarMenu.addInternal() against menu.size().
+  Keep this file at 5 items or fewer.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android" android:theme="@style/BaseTheme">
+
+    <item android:title="@string/home"
+        android:icon="@drawable/ic_home"
+        android:visible="true"
+        android:id="@+id/homeFragment"/>
+
+    <item android:title="@string/downloads"
+        android:icon="@drawable/ic_downloads"
+        android:visible="true"
+        android:id="@+id/downloadQueueMainFragment"/>
+
+    <item android:title="@string/analytics"
+        android:icon="@drawable/ic_analytics"
+        android:visible="true"
+        android:id="@+id/analyticsFragment"/>
+
+    <item android:title="@string/settings"
+        android:icon="@drawable/ic_settings"
+        android:visible="true"
+        android:id="@+id/moreFragment"/>
+
+</menu>

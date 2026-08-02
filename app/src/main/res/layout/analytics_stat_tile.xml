@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.deniscerri.ytdl.ui.widget.LiquidGlassCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/stat_card"
+    app:cardBackgroundColor="@color/carbon_black"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="14dp">
+
+        <TextView
+            android:id="@+id/stat_value"
+            android:textColor="@color/text_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.Zetta.StatValue" />
+
+        <TextView
+            android:id="@+id/stat_label"
+            android:textColor="@color/text_secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:alpha="0.65"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Zetta.Caption" />
+
+    </LinearLayout>
+
+</com.deniscerri.ytdl.ui.widget.LiquidGlassCardView>

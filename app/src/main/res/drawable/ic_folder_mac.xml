@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- macOS style folder: darker back leaf, lighter front leaf, soft blue gradient -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="52dp"
+    android:viewportWidth="64"
+    android:viewportHeight="52">
+
+    <!-- back leaf (tab) -->
+    <path
+        android:pathData="M4,10 a4,4 0 0 1 4,-4 h16 l6,6 h26 a4,4 0 0 1 4,4 v10 h-56 z">
+        <aapt:attr xmlns:aapt="http://schemas.android.com/aapt" name="android:fillColor">
+            <gradient
+                android:startX="4" android:startY="6"
+                android:endX="60" android:endY="26"
+                android:type="linear">
+                <item android:offset="0" android:color="#3B82F6" />
+                <item android:offset="1" android:color="#2563EB" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- front leaf -->
+    <path
+        android:pathData="M4,16 a4,4 0 0 1 4,-4 h48 a4,4 0 0 1 4,4 v26 a4,4 0 0 1 -4,4 h-48 a4,4 0 0 1 -4,-4 z">
+        <aapt:attr xmlns:aapt="http://schemas.android.com/aapt" name="android:fillColor">
+            <gradient
+                android:startX="4" android:startY="12"
+                android:endX="60" android:endY="46"
+                android:type="linear">
+                <item android:offset="0" android:color="#7DB6FF" />
+                <item android:offset="1" android:color="#4B93F7" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- top sheen on the front leaf -->
+    <path
+        android:fillColor="#33FFFFFF"
+        android:pathData="M4,16 a4,4 0 0 1 4,-4 h48 a4,4 0 0 1 4,4 v6 h-56 z" />
+
+</vector>

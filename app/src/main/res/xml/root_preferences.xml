@@ -1,0 +1,70 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:key="appearance"
+        app:icon="@drawable/ic_settings"
+        android:title="@string/general"/>
+
+    <Preference
+        android:key="folders"
+        app:icon="@drawable/baseline_folder_24"
+        android:title="@string/directories"/>
+
+    <Preference
+        android:key="downloading"
+        app:icon="@drawable/ic_downloads"
+        android:title="@string/downloads"/>
+
+    <Preference
+        android:key="updating"
+        app:icon="@drawable/ic_update"
+        android:title="@string/packages"/>
+
+    <Preference
+        android:key="advanced"
+        app:icon="@drawable/baseline_settings_suggest_24"
+        android:title="@string/advanced"/>
+
+    <PreferenceCategory android:title="@string/backup_restore">
+        <Preference
+            app:icon="@drawable/baseline_save_alt_24"
+            app:key="backup"
+            app:title="@string/backup"/>
+
+        <Preference
+            app:icon="@drawable/baseline_restore_page_24"
+            app:key="restore"
+            app:title="@string/restore"/>
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="true"
+            app:icon="@drawable/ic_clock"
+            app:key="automatic_backup"
+            android:summary="@string/automatic_backup_summary"
+            app:title="@string/automatic_backup" />
+
+        <Preference
+            app:icon="@drawable/baseline_folder_24"
+            android:summary=""
+            app:key="backup_path"
+            app:title="@string/backup_path" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/about" >
+        <Preference
+            app:icon="@drawable/ic_telegram"
+            app:key="telegram"
+            app:summary="https://t.me/ytdlnis"
+            app:allowDividerBelow="true"
+            app:title="Telegram">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/ytdlnis" />
+        </Preference>
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

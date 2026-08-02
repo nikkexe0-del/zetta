@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- zetta pixelated "z!" logo -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="200dp"
+    android:height="200dp"
+    android:gravity="fill_horizontal|fill_vertical"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:name="path"
+        android:fillColor="#FFFFFF"
+        android:pathData="M29.80,33.30 h6.40 v6.40 h-6.40 z M36.80,33.30 h6.40 v6.40 h-6.40 z M43.80,33.30 h6.40 v6.40 h-6.40 z M50.80,33.30 h6.40 v6.40 h-6.40 z M57.80,33.30 h6.40 v6.40 h-6.40 z M71.80,33.30 h6.40 v6.40 h-6.40 z M50.80,40.30 h6.40 v6.40 h-6.40 z M71.80,40.30 h6.40 v6.40 h-6.40 z M43.80,47.30 h6.40 v6.40 h-6.40 z M71.80,47.30 h6.40 v6.40 h-6.40 z M36.80,54.30 h6.40 v6.40 h-6.40 z M71.80,54.30 h6.40 v6.40 h-6.40 z M29.80,61.30 h6.40 v6.40 h-6.40 z M29.80,68.30 h6.40 v6.40 h-6.40 z M36.80,68.30 h6.40 v6.40 h-6.40 z M43.80,68.30 h6.40 v6.40 h-6.40 z M50.80,68.30 h6.40 v6.40 h-6.40 z M57.80,68.30 h6.40 v6.40 h-6.40 z M71.80,68.30 h6.40 v6.40 h-6.40 z" />
+</vector>

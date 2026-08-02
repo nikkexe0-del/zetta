@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <PreferenceCategory android:title="@string/source">
+
+        <Preference
+            app:icon="@drawable/ic_info"
+            app:key="ytdl-version"
+            app:title="@string/ytdl_version"/>
+
+        <Preference
+            app:icon="@drawable/ic_update"
+            app:key="update_ytdl"
+            app:summary="@string/ytdl_update_hint"
+            app:title="@string/update_ytdl" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/app">
+
+        <Preference
+            app:icon="@drawable/ic_code"
+            app:key="packages"
+            app:title="@string/packages" />
+
+    </PreferenceCategory>
+
+    <Preference
+        app:icon="@drawable/baseline_reset_tv_24"
+        app:key="reset_preferences"
+        android:summary="@string/reset_preferences_in_screen"
+        app:title="@string/reset" />
+
+</PreferenceScreen>

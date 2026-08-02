@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/general">
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="true"
+            app:icon="@drawable/ic_money"
+            app:key="use_sponsorblock"
+            app:title="@string/use_sponsorblock" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="true"
+            app:icon="@drawable/ic_terminal"
+            app:key="use_extra_commands"
+            android:summary="@string/use_extra_commands_summary"
+            app:title="@string/use_extra_commands" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/audio">
+        <Preference
+            android:icon="@drawable/baseline_high_quality_24"
+            app:key="audio_bitrate"
+            app:defaultValue=""
+            android:summary="@string/defaultValue"
+            app:title="@string/bitrate" />
+
+        <ListPreference
+            app:icon="@drawable/ic_language"
+            app:dialogTitle="@string/preferred_audio_language"
+            app:entries="@array/language_names"
+            app:entryValues="@array/language_codes"
+            app:key="audio_language"
+            app:useSimpleSummaryProvider="true"
+            app:title="@string/preferred_audio_language" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_format"
+            app:key="prefer_container_over_codec_audio"
+            android:summary="@string/prefer_container_over_codec_audio_summary"
+            app:title="@string/prefer_container_over_codec_audio" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="@string/video">
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="true"
+            app:icon="@drawable/ic_subtitles"
+            app:key="embed_subtitles"
+            app:summary="@string/embed_subs_summary"
+            app:title="@string/embed_subtitles" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_subtitles_alternative"
+            app:key="write_subtitles"
+            app:summary="@string/save_subs_desc"
+            app:title="@string/save_subs" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_subtitles_alternative"
+            app:key="write_auto_subtitles"
+            app:summary="@string/save_subs_desc"
+            app:title="@string/save_auto_subs" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="true"
+            app:icon="@drawable/ic_subtitles"
+            app:key="no_keep_subs"
+            app:summary="@string/no_keep_subs_summary"
+            app:title="@string/no_keep_subs" />
+
+        <Preference
+            android:icon="@drawable/baseline_subject_24"
+            app:key="subs_lang"
+            app:useSimpleSummaryProvider="true"
+            app:defaultValue="en.*,.*-orig"
+            app:title="@string/subtitle_languages" />
+
+
+        <ListPreference
+            android:defaultValue=""
+            android:entries="@array/sub_formats"
+            android:entryValues="@array/sub_formats_values"
+            android:icon="@drawable/baseline_format_quote_24"
+            app:key="sub_format"
+            app:useSimpleSummaryProvider="true"
+            app:title="@string/subtitle_format" />
+
+        <ListPreference
+            android:defaultValue="jpg"
+            android:entries="@array/thumbnail_containers"
+            android:entryValues="@array/thumbnail_containers_values"
+            android:icon="@drawable/ic_image"
+            app:key="thumbnail_format"
+            app:useSimpleSummaryProvider="true"
+            app:title="@string/thumbnail_format" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="true"
+            app:icon="@drawable/ic_chapters"
+            app:key="add_chapters"
+            app:summary="@string/add_chapters_summary"
+            app:title="@string/add_chapters" />
+
+
+
+        <ListPreference
+            android:defaultValue="best"
+            android:entries="@array/video_formats"
+            android:entryValues="@array/video_formats_values"
+            android:icon="@drawable/ic_video"
+            app:key="video_quality"
+            app:useSimpleSummaryProvider="true"
+            app:title="@string/video_quality" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            app:icon="@drawable/baseline_delete_24"
+            app:key="remove_audio"
+            app:title="@string/remove_audio" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_plus"
+            app:key="also_download_audio"
+            app:title="@string/also_download_audio" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/format">
+
+        <ListPreference
+            app:icon="@drawable/ic_format"
+            app:dialogTitle="@string/preferred_format_size"
+            app:entries="@array/preferred_format_size"
+            app:entryValues="@array/preferred_format_size_values"
+            android:defaultValue=""
+            app:key="preferred_format_size"
+            app:useSimpleSummaryProvider="true"
+            app:title="@string/preferred_format_size" />
+
+    </PreferenceCategory>
+
+    <Preference
+        app:icon="@drawable/baseline_reset_tv_24"
+        app:key="reset_preferences"
+        android:summary="@string/reset_preferences_in_screen"
+        app:title="@string/reset" />
+
+</PreferenceScreen>

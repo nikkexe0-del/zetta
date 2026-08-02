@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="icon_bg">#000</color>
+    <color name="black">#000000</color>
+
+    <!-- zetta: floating liquid glass nav pill (dark) -->
+    <color name="nav_pill_bg">#E61C1C1E</color>
+    <color name="nav_pill_stroke">#2EFFFFFF</color>
+    <color name="nav_pill_sheen">#33FFFFFF</color>
+
+    <!-- zetta analytics palette: dark values (light defaults live in values/colors.xml) -->
+    <color name="void_black">#0A0A0B</color>
+    <color name="carbon_black">#141416</color>
+    <color name="text_primary">#F5F5F7</color>
+    <color name="text_secondary">#A0A0A6</color>
+</resources>

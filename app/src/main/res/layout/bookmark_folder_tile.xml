@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="96dp"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="4dp"
+    android:paddingVertical="8dp">
+
+    <ImageView
+        android:id="@+id/folder_icon"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:contentDescription="@string/folders"
+        android:src="@drawable/ic_folder_mac" />
+
+    <TextView
+        android:id="@+id/folder_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Zetta.Caption" />
+
+    <TextView
+        android:id="@+id/folder_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.55"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Zetta.Caption" />
+
+</LinearLayout>
